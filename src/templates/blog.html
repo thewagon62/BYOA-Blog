@@ -1,0 +1,60 @@
+{{header}}
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+        }
+        
+        .blog-content h2 {
+            margin-top: 2rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .blog-content code {
+            background-color: var(--accent-color);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+        }
+        
+        .blog-content pre code {
+            display: block;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+    </style>
+    
+    <main>
+        <article class="blog-post">
+            <h1>{{title}}</h1>
+            <div class="blog-meta">
+                <time datetime="{{date}}">{{date}}</time>
+            </div>
+            <div class="blog-content">
+                {{content}}
+            </div>
+        </article>
+    </main>
+{{footer}} 
