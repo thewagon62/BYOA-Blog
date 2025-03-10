@@ -29,10 +29,12 @@ async function applyTemplate(template, data) {
     // First replace partials
     const header = await readPartial('header');
     const footer = await readPartial('footer');
+    const convertkit_form = await readPartial('convertkit_form');
     
     let result = template
         .replace('{{header}}', header)
-        .replace('{{footer}}', footer);
+        .replace('{{footer}}', footer)
+        .replace('{{convertkit_form}}', convertkit_form);
     
     // Then replace data variables
     for (const [key, value] of Object.entries(data)) {
